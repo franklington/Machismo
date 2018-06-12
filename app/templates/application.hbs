@@ -1,5 +1,19 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
 
-{{outlet}}
+
+<main>
+            <header>
+                <h1>Hallo. <span>#machismo.today</span></h1>
+                {{#link-to 'about'}}
+                    was ist machismo?
+                {{/link-to}}
+
+            </header>
+
+            <section class="container-fluid">
+
+              {{outlet}}
+
+
+
+            </section>
+          </main>

@@ -1,0 +1,129 @@
+<div class="lightbox row justify-content-center" id="add">
+
+      <div class="col-auto align-self-center create-post">
+        {{#link-to 'index' class="text-right close text-white"}}
+          X
+
+        {{/link-to}}
+        <h3 class="text-center text-white">Post erstellen</h3>
+        <form class="text-white">
+              <div class="form-row">
+                <div class="form-group col-md-7">
+                  <label for="inputAddress">Datum</label>
+                  {{#power-datepicker selected=datum onSelect=(action (mut datum) value="date") as |dp|}}
+                    {{#dp.trigger tabindex="-1"}}
+                      <input type="text" class="form-control" readonly value={{moment-format datum 'MM/DD/YYYY'}}>
+                    {{/dp.trigger}}
+
+                    {{#dp.content class=""}}
+                      {{dp.nav}}
+                      {{dp.days}}
+                    {{/dp.content}}
+                  {{/power-datepicker}}
+                </div>
+                <div class="form-group col-12 col-md-5">
+                    <label for="inputAddress">Tageszeit</label>
+
+                    <select class="form-control"  onchange={{action "selectTageszeit" value="target.value"}}>
+                      <option value="Morgen">Morgen</option>
+                      <option value="Vormittag">Vormittag</option>
+                      <option value="Mittag" >Mittag</option>
+                      <option value="Nachmittag" >Nachmittag</option>
+                      <option value="Abend" >Abend</option>
+                      <option value="Nacht">Nacht</option>
+                    </select>
+                </div>
+              </div>
+
+              <!--wo-->
+              <div class="form-row">
+                <div class="form-group col-8">
+                  <label for="strasse">Ort</label>
+                  {{input type="text" value=ort class="form-control"  placeholder="Ort"}}
+                </div>
+                <div class="form-group col-4">
+                  <label for="ort">Wo</label>
+                  <select class="form-control" onchange={{action "selectWo" value="target.value"}} >
+                    <option value="Strasse" selected>Strasse</option>
+                    <option value="öffentl. Verkehr" >öffentl. Verkehr</option>
+                    <option value="Zuhause" >Zuhause</option>
+                    <option value="Arbeit" >Arbeit</option>
+                    <option value="Bar/Club" >Bar/Club</option>
+                  </select>
+                </div>
+              </div>
+              <!-- art der belästigung -->
+              <div class="form-row">
+
+                <div class="form-group col-12 col-md-6">
+                  <div class="form-check">
+                    {{input type="checkbox"   class="form-check-input"checked=pfiff}}
+                    <label class="form-check-label" for="gridCheck">
+                      Hinterhergepfiffen
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    {{input type="checkbox"   class="form-check-input"checked=hupen}}
+                    <label class="form-check-label" for="gridCheck">
+                      Angehupt
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    {{input type="checkbox"   class="form-check-input"checked=schmatz}}
+                    <label class="form-check-label" for="gridCheck">
+                        Schmatzgeräusche                    </label>
+                  </div>
+                  <div class="form-check">
+                    {{input type="checkbox"   class="form-check-input"checked=spuck}}
+                    <label class="form-check-label" for="gridCheck">
+                      Gespuckt
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group col-12 col-md-6">
+                  <div class="form-check">
+                    {{input type="checkbox"  class="form-check-input" checked=schimpf}}
+                    <label class="form-check-label" for="gridCheck">
+                        Beschimpft                    </label>
+                  </div>
+                  <div class="form-check">
+                    {{input type="checkbox"   class="form-check-input" checked=starr}}
+                    <label class="form-check-label" for="gridCheck">
+                    Angestarrt
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    {{input type="checkbox"   class="form-check-input" checked=lach}}
+                    <label class="form-check-label" for="gridCheck">
+                      Ausgelacht
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    {{input type="checkbox" class="form-check-input" checked=beruht}}
+                    <label class="form-check-label" for="gridCheck">
+                      Berührt
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Beschreibe hier genauer, was vorgefallen ist.</label>
+
+                {{textarea value=beschreibung class="form-control" rows="3"}}
+              </div>
+
+              <p class="small">Bitte um Rücksichtnahme, dass im Post keine Namen genannt werden dürfen.
+                Die gegenseitige Anonymität ist für das Projekt wichtig.
+              </p>
+
+
+
+        </form>
+        <button class="btn btn-outline-white float-right" {{action "postMessage"}}>Posten</button>
+
+      </div>
+
+
+
+
+</div>

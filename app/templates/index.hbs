@@ -1,0 +1,54 @@
+
+                <div class="row">
+
+                  {{#each model as |post|}}
+                  <div class=" post-container col-sm-12 col-md-3 col-lg-4">
+                    <div class="post">
+
+
+                      <div class="date">{{moment-from-now post.datum}} {{post.zeit}}</div>
+                      <div class="place">{{post.ort}} {{post.wo}}</div>
+                      <ul>
+                        {{#if post.pfiff}}  <li>Hinterhergepfiffen</li> {{/if}}
+                        {{#if post.hupen}}  <li>Angehupt</li>  {{/if}}
+                        {{#if post.schmatz}}  <li>Schmatzgeräusche</li>  {{/if}}
+                        {{#if post.spuck}}  <li>Gespuckt</li>  {{/if}}
+                        {{#if post.schimpf}}  <li>Beschimpft</li>  {{/if}}
+                        {{#if post.starr}}  <li>Angestarrt</li>  {{/if}}
+                        {{#if post.lach}}  <li>Ausgelacht</li>  {{/if}}
+                        {{#if post.beruht}}  <li>Berührt</li>  {{/if}}
+
+
+                      </ul>
+                      <p>
+                        {{post.beschreibung}}
+                      </p>
+                    </div>
+                  </div>
+                  {{/each}}
+
+
+                  <div class=" col-sm-12 col-md-4 col-lg-4">
+                    <div class="info">
+                        <h2><hr>Make (Wo)Men aware of machist behaviour<hr></h2>
+                        <p>Teile hier deine Gedanken und Erlebnisse. Anonym.</p>
+
+                        {{#link-to 'index.create' class="button"}}
+                          +
+                        {{/link-to}}
+                        {{#link-to 'about'  class="button"}}
+                          ?
+                        {{/link-to}}
+                    </div>
+                  </div>
+
+
+
+
+
+
+                </div>
+
+
+
+        {{outlet}}
