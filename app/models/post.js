@@ -18,5 +18,5 @@ export default DS.Model.extend({
 
     beschreibung:attr('string'),
     freigabe:attr('boolean'),
-
+    timestamp:attr('number',{default: new Date().getTime(),})
 });

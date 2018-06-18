@@ -35,7 +35,9 @@ export default Controller.extend({
         starr:this.get('starr'),
         lach:this.get('lach'),
         beruht:this.get('beruht'),
-        beschreibung:this.get('beschreibung')
+        beschreibung:this.get('beschreibung'),
+        timestamp: new Date().getTime()
+
       });
 
       //error checking must be implemented
