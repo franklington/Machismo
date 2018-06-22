@@ -17,7 +17,7 @@
 
         <div class="post">
           <div class="date">{{moment-format post.datum 'DD.MM.YYYY'}}, {{post.zeit}}</div>
-          <div class="place">{{post.ort}} {{post.wo}}</div>
+          <div class="place">{{post.ort}}<br>{{post.wo}}</div>
           <ul>
             {{#if post.pfiff}}  <li>Hinterhergepfiffen</li> {{/if}}
             {{#if post.hupen}}  <li>Angehupt</li>  {{/if}}
@@ -35,7 +35,7 @@
       </div>
 
 
-      {{#if (eq index 1)}}
+      {{#if (eq index 0)}}
 
         <div class=" card d-none d-lg-inline-block">
               <div class="info">
