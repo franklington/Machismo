@@ -198,7 +198,7 @@ section div {
     background-color: #E2B5A4;
     color: white;
     text-decoration: none;
-    margin-right: 0.5rem;
+    margin-right: 0.8rem;
 }
 
 .lightbox {
@@ -211,6 +211,7 @@ section div {
     &.fliess{
       font-size: 1.2rem;
       line-height: 1.4;
+      max-width: 450px;
     }
   }
   h1{
@@ -228,6 +229,7 @@ section div {
     &.center
     {
       display: inline-block;
+      margin-top: 20px;
     }
 }
 
@@ -236,7 +238,10 @@ section div {
   font-style: italic;
   font-weight: 400;
   line-height: 1.3;
+  //margin-right: -140px;
+  float: right;
   }
+
 .AUFZEIGEN{
   font-size: 1.2rem;
   font-weight: bold;
@@ -257,6 +262,30 @@ opacity: 0.5;}
 
 img.pfeil{
   width: 250px;
-  margin-left: 510px;
   margin-top: -130px;
+  float: right;
+  margin-right: -50px;
+}
+
+
+.imprint{
+p{
+  &.imprfliess{
+    font-size: 0.8rem;
+    max-width: 1000px;
+  }
+  &.imprh1{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &.imprh2{
+    font-weight: bold;
+  }
+}
+}
+
+.erfolg{
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
 }
