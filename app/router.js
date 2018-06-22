@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('success');
     this.route('failed');
   });
+  this.route('nimda');
 });
 
 export default Router;

@@ -3,7 +3,7 @@ import Controller from '@ember/controller';
 export default Controller.extend({
 
   datum: new Date(),
-  zeit:"",
+  zeit:"Morgen",
   ort:"",
   wo:"Strasse",
 
