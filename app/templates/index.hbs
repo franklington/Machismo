@@ -40,7 +40,7 @@
         <div class=" card d-none d-lg-inline-block">
               <div class="info">
                   <hr><h2>Make (Wo)Men aware of <br>machist behaviour</h2><hr>
-<br>
+                  <br>
                   <p>Teile hier deine <br>Gedanken und <br>Erlebnisse. <br> Anonym.</p>
 
                   {{#link-to 'index.create' class="button"}}
@@ -56,10 +56,22 @@
             </div>
 
       {{/if}}
+      {{#if (eq index 2)}}
+          {{ort-chart class="post-container card" model=model}}
+      {{/if}}
+      {{#if (eq index 3)}}
+          {{tageszeit-chart class="post-container card" model=model}}
+      {{/if}}
+      {{#if (eq index 4)}}
+          {{beschimpfungen-chart class="post-container card" model=model}}
+      {{/if}}
+
     {{/each}}
+
+
   </div>
 
 
 
 
-        {{outlet}}
+  {{outlet}}
