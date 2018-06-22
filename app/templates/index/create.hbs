@@ -109,7 +109,12 @@
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Beschreibe hier genauer, was vorgefallen ist.</label>
 
-                {{textarea value=beschreibung class="form-control" rows="3"}}
+                {{textarea value=beschreibung class="form-control {{if showNotification 'border-red'}}" rows="3"}}
+                {{#if showNotification}}
+                <p class="small text-blue">Der Text muss mindestens 30 Zeichen haben und darf nicht leer sein.
+                  </p>
+                {{/if}}
+
               </div>
 
               <p class="small">Bitte um Rücksichtnahme, dass im Post keine Namen genannt werden dürfen.
