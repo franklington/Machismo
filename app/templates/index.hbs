@@ -1,7 +1,7 @@
   <div class="card-columns">
-    <div class=" card d-lg-none">
+    <div class=" card">
           <div class="info">
-              <hr><h2>Make (Wo)Men aware of <br>machist behaviour</h2><hr>
+              <hr><h2>Make (Wo)Men <br>aware of <br>machist <br>behaviour</h2><hr>
               <p>Teile hier deine Gedanken und Erlebnisse. Anonym.</p>
 
               {{#link-to 'index.create' class="button"}}
@@ -16,7 +16,7 @@
       <div class=" post-container card">
 
         <div class="post">
-          <div class="date">{{moment-format post.datum 'DD.MM.YYYY'}}, {{post.zeit}}</div>
+          <div class="date">{{post.zeit}}, {{moment-format post.datum  'DD. MMMM YYYY'}}</div>
           <div class="place">{{post.ort}}<br>{{post.wo}}</div>
           <ul>
             {{#if post.pfiff}}  <li>Hinterhergepfiffen</li> {{/if}}
@@ -37,7 +37,7 @@
 
       {{#if (eq index 0)}}
 
-        <div class=" card d-none d-lg-inline-block">
+        <div class=" card d-none ">
               <div class="info">
                   <hr><h2>Make (Wo)Men aware of <br>machist behaviour</h2><hr>
                   <br>

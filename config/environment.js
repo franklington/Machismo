@@ -12,6 +12,11 @@ module.exports = function(environment) {
        databaseURL: 'https://machismo-today.firebaseio.com',
        storageBucket: 'machismo-today.appspot.com',
      },
+     moment: {
+  // To cherry-pick specific locale support into your application.
+  // Full list of locales: https://github.com/moment/moment/tree/2.10.3/locale
+      includeLocales: ['de-At']
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

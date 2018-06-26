@@ -1,7 +1,11 @@
 
 html{
 font-size: 14px;
+quotes:'«' '»';
+
 }
+
+:root {quotes: "«\202F" "\202F»";}
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +28,7 @@ main {
 header {
   //max-width: 1200px;
   margin: auto;
-    padding-top: 4rem;
+    padding-top: 3.5rem;
     padding-left: 50px;
     padding-right: 60px;
     padding-bottom: 40px;
@@ -89,6 +93,7 @@ section div {
 .post,
 .info{
   margin-top: 25px;
+  position: inherit;
 }
 .post {
     .date{
@@ -304,5 +309,15 @@ p{
     height: 100% !important;
     min-height: 350px;
 
+  }
+
+  &.chart-pie{
+    svg{
+      //transform:scale(1.5);
+
+      text{
+        font-size: calc(12px * 0.75);
+      }
+    }
   }
 }

@@ -49,7 +49,7 @@ export default Component.extend({
 
     return   [
         	{
-        		"label": "Strasse",
+        		"label": "Straße",
         		"value": strasse
         	},
         	{

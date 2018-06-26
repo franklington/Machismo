@@ -47,25 +47,29 @@ export default Component.extend({
       if(post.get(entry)){
         beruht++;
       }
+      entry = 'schimpf';
+      if(post.get(entry)){
+        schimpf++;
+      }
     });
 
 
 
     return   [
         	{
-        		"label": "Pfeiffen",
+        		"label": "Hinterhergepfiffen",
         		"value": pfiff
         	},
         	{
-        		"label": "Hupen",
+        		"label": "Angehupt",
         		"value": hupen
         	},
         	{
-        		"label": "Schmatzen",
+        		"label": "Schmatzgeräusche",
         		"value": schmatz
         	},
         	{
-        		"label": "Spucken",
+        		"label": "Gespuckt",
         		"value": spuck
         	},
         	{

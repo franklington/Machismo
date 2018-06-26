@@ -10,9 +10,9 @@
               <div class="form-row">
                 <div class="form-group col-md-7">
                   <label for="inputAddress">Datum</label>
-                  {{#power-datepicker selected=datum onSelect=(action (mut datum) value="date") as |dp|}}
+                  {{#power-datepicker selected=datum locale="de" onSelect=(action (mut datum) value="date") as |dp|}}
                     {{#dp.trigger tabindex="-1"}}
-                      <input type="text" class="form-control" readonly value={{moment-format datum 'MM/DD/YYYY'}}>
+                      <input type="text" class="form-control" readonly value={{moment-format datum 'DD. MMMM YYYY'}}>
                     {{/dp.trigger}}
 
                     {{#dp.content class=""}}
@@ -44,7 +44,7 @@
                 <div class="form-group col-4">
                   <label for="ort">Wo</label>
                   <select class="form-control" onchange={{action "selectWo" value="target.value"}} >
-                    <option value="Strasse" selected>Strasse</option>
+                    <option value="Strasse" selected>Straße</option>
                     <option value="öffentl. Verkehr" >öffentl. Verkehr</option>
                     <option value="Zuhause" >Zuhause</option>
                     <option value="Arbeit" >Arbeit</option>
